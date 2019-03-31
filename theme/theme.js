@@ -8,7 +8,7 @@ export const colors = {
     brandYellow: greenkleanYellow,
     white:white,
     black:'#000',
-    offColor:'#ddd',
+    offColor:'rgba(255,255,255,0.7)',
 }
 
 const remValue = 16;
@@ -37,14 +37,8 @@ export const layouting = StyleSheet.create({
     },
     loginBox:{
         height:300,
-        backgroundColor:white,
+        backgroundColor:'transparent',
         padding:20,
-        borderBottomWidth: 0,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-        shadowRadius: 20,
-        elevation: 5,
     }
   });
 
