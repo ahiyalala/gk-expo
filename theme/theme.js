@@ -19,7 +19,22 @@ function rem(value){
 export const inputs = StyleSheet.create({
     brandBtn: {
         backgroundColor:greenkleanYellow,
-        padding:10
+        color:colors.white,
+        padding:10,
+        borderColor:colors.white,
+        borderWidth:1
+    },
+    whiteBtn: {
+        backgroundColor:colors.white,
+        color:colors.black,
+        padding:10,
+        marginBottom:rem(1)
+    },
+    whiteBtnDisabled: {
+        backgroundColor:colors.offColor,
+        color:colors.black,
+        padding:10,
+        marginBottom:rem(1)
     }
 });
 
