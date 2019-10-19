@@ -1,5 +1,5 @@
 import React from "react";
-const baseUrl = "http://192.168.254.100";
+const baseUrl = "http://192.168.254.145";
 
 export default class Data extends React.Component {
   static getData(url, fallback) {
