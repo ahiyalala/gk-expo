@@ -7,6 +7,7 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import AuthLoadingScreen from "./AuthLoadingScreen";
 import { colors } from "./theme/theme";
+import { Home } from "./Pages/Main/Home";
 // Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
 // goes here.
 
@@ -28,12 +29,14 @@ const AuthStack = createStackNavigator({
     }
   }
 });
+const AppStack = createStackNavigator({ Home: Home });
 
 export default createAppContainer(
   createSwitchNavigator(
     {
       AuthLoading: AuthLoadingScreen,
-      Auth: AuthStack
+      Auth: AuthStack,
+      App: AppStack
     },
     {
       initialRouteName: "AuthLoading"

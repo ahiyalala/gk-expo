@@ -70,11 +70,10 @@ export default class App extends React.Component {
       if (status) {
         delete result.password;
         AsyncStorage.setItem("credentials", JSON.stringify(result));
-        Alert.alert("Yay", "Login successful");
+        this.props.navigation.navigate("App");
       } else {
-        Alert.alert("Yay", "Boo, failed");
+        Alert.alert("Login Failed", "Check your credentials");
       }
-      AsyncStorage.removeItem("credentials");
     });
 
     this.setState(prevState => {
