@@ -1,10 +1,10 @@
 {
-  "devToolsPort": 19002,
+  "devToolsPort": 19003,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 14004,
-  "expoServerNgrokUrl": "https://mx-2vg.ahiyalala.greenklean-expo.exp.direct",
-  "packagerNgrokUrl": "https://packager.mx-2vg.ahiyalala.greenklean-expo.exp.direct",
-  "ngrokPid": 12160,
+  "packagerPid": 5992,
+  "expoServerNgrokUrl": "https://be-kiq.ahiyalala.greenklean-expo.exp.direct",
+  "packagerNgrokUrl": "https://packager.be-kiq.ahiyalala.greenklean-expo.exp.direct",
+  "ngrokPid": 5548,
   "webpackServerPort": null
 }

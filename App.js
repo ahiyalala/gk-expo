@@ -8,6 +8,8 @@ import SignUp from "./Pages/SignUp";
 import AuthLoadingScreen from "./AuthLoadingScreen";
 import { colors } from "./theme/theme";
 import { Home } from "./Pages/Main/Home";
+import { Places } from "./Pages/Main/Places";
+import { PlacesForm } from "./Pages/Main/PlacesForm";
 // Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
 // goes here.
 
@@ -29,7 +31,11 @@ const AuthStack = createStackNavigator({
     }
   }
 });
-const AppStack = createStackNavigator({ Home: Home });
+const AppStack = createStackNavigator({
+  Home: Home,
+  Places: Places,
+  PlacesForm: PlacesForm
+});
 
 export default createAppContainer(
   createSwitchNavigator(

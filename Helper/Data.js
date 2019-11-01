@@ -1,4 +1,5 @@
 import React from "react";
+import { AsyncStorage } from "react-native";
 const baseUrl = "http://192.168.254.145";
 
 export default class Data extends React.Component {
@@ -14,7 +15,8 @@ export default class Data extends React.Component {
   }
 
   static async getAuthenticatedData(url, fallback) {
-    var profile = JSON.parse(localStorage.getItem("credentials"));
+    var result = await AsyncStorage.getItem("credentials");
+    var profile = JSON.parse(result);
 
     fetch(baseUrl + url, {
       method: "get",
@@ -47,7 +49,8 @@ export default class Data extends React.Component {
   }
 
   static async sendAuthenticatedData(url, content, fallback) {
-    var profile = JSON.parse(localStorage.getItem("credentials"));
+    var result = await AsyncStorage.getItem("credentials");
+    var profile = JSON.parse(result);
 
     fetch(baseUrl + url, {
       method: "post",
