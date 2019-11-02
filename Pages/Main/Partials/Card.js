@@ -16,7 +16,7 @@ export default class Card extends React.Component {
   render() {
     return (
       <View style={{ padding: 8 }}>
-        <View
+        <TouchableOpacity
           style={{
             padding: 16,
             shadowColor: "#000",
@@ -30,12 +30,13 @@ export default class Card extends React.Component {
 
             elevation: 6
           }}
+          onPress={this.props.onPress}
         >
           <Text style={{ fontSize: 16, fontWeight: "bold" }}>
             {this.props.title}
           </Text>
           <Text>{this.props.description}</Text>
-        </View>
+        </TouchableOpacity>
       </View>
     );
   }

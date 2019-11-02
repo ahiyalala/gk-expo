@@ -9,9 +9,11 @@
   "dependencies": {
     "expo": "^35.0.0",
     "isaac": "0.0.5",
+    "moment": "^2.24.0",
     "react": "16.8.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
     "react-native-bcrypt": "^2.4.0",
+    "react-native-calendars": "^1.212.0",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-validator-form": "^1.0.0"
   },

@@ -10,9 +10,12 @@ import { colors } from "./theme/theme";
 import { Home } from "./Pages/Main/Home";
 import { Places } from "./Pages/Main/Places";
 import { PlacesForm } from "./Pages/Main/PlacesForm";
+import { BookingCalendar } from "./Pages/Main/BookingCalendar";
+import { BookingType } from "./Pages/Main/BookingType";
+import { BookingDetails } from "./Pages/Main/BookingDetails";
 // Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
 // goes here.
-
+console.disableYellowBox = true;
 const AuthStack = createStackNavigator({
   SignIn: {
     screen: SignIn,
@@ -34,7 +37,10 @@ const AuthStack = createStackNavigator({
 const AppStack = createStackNavigator({
   Home: Home,
   Places: Places,
-  PlacesForm: PlacesForm
+  PlacesForm: PlacesForm,
+  BookingCalendar: BookingCalendar,
+  BookingType: BookingType,
+  BookingDetails: BookingDetails
 });
 
 export default createAppContainer(

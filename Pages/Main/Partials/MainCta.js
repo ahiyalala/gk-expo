@@ -13,7 +13,14 @@ export class MainCta extends React.Component {
           borderRadius: 5
         }}
       >
-        <TouchableOpacity style={{ height: "100%", justifyContent: "center" }}>
+        <TouchableOpacity
+          style={{
+            height: "100%",
+            justifyContent: "center"
+          }}
+          disabled={this.props.disabled}
+          onPress={this.props.onPress}
+        >
           <Text
             style={{
               color: "#fff",

@@ -10,6 +10,7 @@ import React from "react";
 import { colors } from "../../theme/theme";
 import Card from "./Partials/Card";
 import Data from "../../Helper/Data";
+import { AntDesign } from "@expo/vector-icons";
 export class Places extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -19,7 +20,13 @@ export class Places extends React.Component {
       },
       headerTintColor: "#fff",
       headerRight: (
-        <Button title="Add" onPress={() => navigation.navigate("PlacesForm")} />
+        <TouchableOpacity
+          style={{ paddingHorizontal: 16 }}
+          title="Add"
+          onPress={() => navigation.navigate("PlacesForm")}
+        >
+          <AntDesign name="plus" size={32} color="#fff" />
+        </TouchableOpacity>
       )
     };
   };
@@ -92,7 +99,7 @@ export class Places extends React.Component {
           return (
             <Card
               key={index}
-              title={value.location_name}
+              title={value.location_type}
               description={
                 value.location_street +
                 ", " +

@@ -66,5 +66,9 @@ export const typography = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 15
+  },
+  strongHelperText: {
+    fontSize: rem(1),
+    fontWeight: "bold"
   }
 });
