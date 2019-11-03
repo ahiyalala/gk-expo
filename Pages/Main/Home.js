@@ -15,7 +15,9 @@ import { SimpleLineIcons, AntDesign } from "@expo/vector-icons";
 import { Navicon } from "./Partials/Navicon";
 import { MainCta } from "./Partials/MainCta";
 import Data from "../../Helper/Data";
-import { colors } from "../../theme/theme";
+import moment from "moment";
+import AppointmentCard from "./Partials/AppointmentCard";
+
 export class Home extends React.Component {
   static navigationOptions = {
     header: null
@@ -126,15 +128,41 @@ export class Home extends React.Component {
         </Text>
       );
 
-    return pending.map((appointment, index) => {
-      return (
-        <Card
-          key={index}
-          title={appointment.service_type_key}
-          description={appointment.date}
-        />
-      );
-    });
+    return (
+      <View>
+        {pending.map((appointment, index) => {
+          return (
+            <AppointmentCard
+              key={index}
+              index={index}
+              title={appointment.service.service_type_key}
+              price={appointment.total_price}
+              schedule_date={moment(appointment.date).format("LL")}
+              schedule_time={`${appointment.start_time} to ${appointment.end_time}`}
+              number_of_housekeepers={appointment.housekeepers.length}
+              onPress={() =>
+                this.props.navigation.navigate("BookingInformation", {
+                  bookingDetails: appointment
+                })
+              }
+            />
+          );
+        })}
+
+        <Text
+          style={{
+            fontStyle: "italic",
+            fontSize: 12,
+            marginTop: 8,
+            textAlign: "center",
+            color: "#aaa"
+          }}
+        >
+          A total of {pending.length}{" "}
+          {pending.length > 1 ? "appointments" : "appointment"}
+        </Text>
+      </View>
+    );
   }
 
   render() {

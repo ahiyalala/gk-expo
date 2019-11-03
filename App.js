@@ -13,6 +13,7 @@ import { PlacesForm } from "./Pages/Main/PlacesForm";
 import { BookingCalendar } from "./Pages/Main/BookingCalendar";
 import { BookingType } from "./Pages/Main/BookingType";
 import { BookingDetails } from "./Pages/Main/BookingDetails";
+import { BookingInformation } from "./Pages/Main/BookingInformation";
 // Implementation of HomeScreen, OtherScreen, SignInScreen, AuthLoadingScreen
 // goes here.
 console.disableYellowBox = true;
@@ -40,7 +41,8 @@ const AppStack = createStackNavigator({
   PlacesForm: PlacesForm,
   BookingCalendar: BookingCalendar,
   BookingType: BookingType,
-  BookingDetails: BookingDetails
+  BookingDetails: BookingDetails,
+  BookingInformation: BookingInformation
 });
 
 export default createAppContainer(
